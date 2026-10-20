@@ -7,7 +7,6 @@ backups/
 *.sqlite
 *.db
 *.scv
-*.json
 
 # Sonstiges
 *.log
