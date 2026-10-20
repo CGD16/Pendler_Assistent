@@ -1,0 +1,26 @@
+services:
+  pendler-db:
+    image: postgres:16-alpine
+    container_name: pendler-db
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - pendler_pgdata:/var/lib/postgresql/data
+    networks:
+      - pendler-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pendler_pgdata:
+
+networks:
+  pendler-net:
+    name: pendler-net
+
+
