@@ -16,11 +16,30 @@ services:
       timeout: 5s
       retries: 5
 
+  n8n-pendler:
+    image: n8nio/n8n:2.19.5
+    container_name: n8n-pendler
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5679:5678"
+    environment:
+      - GENERIC_TIMEZONE=Europe/Berlin
+      - TZ=Europe/Berlin
+    volumes:
+      - n8n_pendler_data:/home/node/.n8n
+    networks:
+      - pendler-net
+    depends_on:
+      pendler-db:
+        condition: service_healthy
+
 volumes:
   pendler_pgdata:
+  n8n_pendler_data:
 
 networks:
   pendler-net:
     name: pendler-net
+
 
 
