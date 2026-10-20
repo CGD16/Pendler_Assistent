@@ -1,0 +1,14 @@
+# Geheimnisse (API-Keys, Passwörter) - NIEMALS committen
+.env
+
+# Lokale Daten und Datenbanken
+data/
+backups/
+*.sqlite
+*.db
+*.scv
+*.json
+
+# Sonstiges
+*.log
+.DS_Store
