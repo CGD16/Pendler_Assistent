@@ -61,17 +61,4 @@ Fällt eine externe API (z. B. Wetter oder ÖPNV-Echtzeit) aus, bricht der Workf
 | **Datenhistorie** | Kaum/Keine Langzeitauswertung | Volle Kontrolle über eigene Historie (SQL) |
 | **Live-Traffic (Landstraße)**| ✅ Sehr präzise (Millionen Livedaten) | ❌ Nur offizielle Sperrungen/Baustellen |
 
----
 
-## 🚀 Roadmap & Risikomanagement
-
-- [x] Konzept & Architektur-Draft
-- [ ] **Phase 1: Fundament & Daten-Logger**
-  - [ ] Datenbank-Schema aufsetzen (SQLite/Postgres)
-  - [ ] Tankerkönig- & Wetter-Logger starten (Historie aufbauen)
-- [ ] **Phase 2: ÖPNV- & Route-Prototyping (Höchstes Risiko)**
-  - [ ] GTFS-Realtime / DB-API Anbindung testen & Ausfallsicherheit prüfen
-  - [ ] OpenRouteService für Auto-Routen integrieren
-- [ ] **Phase 3: Decision Engine & Notifier**
-  - [ ] Scoring-Logik & Regelkette implementieren
-  - [ ] Telegram-Bot Anbindung & Fallback-Handling umsetzen
