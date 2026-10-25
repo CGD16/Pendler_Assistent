@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T21:23:50.095Z",
+  "updatedAt": "2026-10-25T12:02:23.374Z",
   "createdAt": "2026-10-20T21:23:50.017Z",
   "id": "NaOvObrxtlgxVOUU",
   "name": "My workflow",
@@ -17,9 +17,55 @@
       ],
       "id": "85a0ebbb-b66f-47e2-8ded-6f4eb013de50",
       "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "2a0482f6-e447-4b82-898a-6eecdd645aa7",
+              "leftValue": "",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        208,
+        0
+      ],
+      "id": "646df2ae-06d1-41d7-a448-380ba181a3f6",
+      "name": "If"
     }
   ],
-  "connections": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
   "settings": {
     "executionOrder": "v1",
     "binaryMode": "separate"
@@ -27,9 +73,9 @@
   "staticData": null,
   "meta": null,
   "pinData": {},
-  "versionId": "aa6c52ce-615d-4541-8666-24be3513c581",
+  "versionId": "2e553178-9602-44bc-a191-e66732020952",
   "activeVersionId": null,
-  "versionCounter": 2,
+  "versionCounter": 3,
   "triggerCount": 0,
   "tags": [],
   "shared": [
